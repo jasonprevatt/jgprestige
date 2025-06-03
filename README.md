@@ -9,6 +9,7 @@
     <title>Central Florida Property Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png"> <!-- Placeholder favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -21,7 +22,30 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Property Management</a>
+                    <div class="dropdown-content">
+                        <a href="#services">Guest Support</a>
+                        <a href="#services">Maintenance</a>
+                        <a href="#services">Booking Management</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Full-Service Cleanings</a>
+                    <div class="dropdown-content">
+                        <a href="#services">Deep Cleaning</a>
+                        <a href="#services">Turnover Services</a>
+                        <a href="#services">Eco-Friendly Options</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Marketing & Bookings</a>
+                    <div class="dropdown-content">
+                        <a href="#services">Airbnb Optimization</a>
+                        <a href="#services">VRBO Marketing</a>
+                        <a href="#services">Local Advertising</a>
+                    </div>
+                </li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
@@ -30,17 +54,17 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Elevate Your Central Florida Properties</h1>
-            <p>Premier property management, cleaning, and marketing services for vacation rentals in Orlando, Kissimmee, and beyond.</p>
-            <a href="#contact" class="cta-button">Request a Quote</a>
+            <h1>Simplify Your Property Management in Central Florida</h1>
+            <p>Expert services for vacation rentals in Orlando, Kissimmee, and beyond.</p>
+            <a href="#contact" class="cta-button">Get a Quote</a>
         </div>
     </section>
 
     <!-- About Us Section -->
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>We are Central Florida Property Services, your trusted partner in managing vacation rentals and properties in Orlando, Kissimmee, and surrounding areas. With a passion for hospitality and local expertise, we deliver exceptional property management, cleaning, and marketing to maximize your rental income and guest satisfaction.</p>
-        <p>Our mission is to make property ownership stress-free while ensuring guests enjoy unforgettable stays in Central Florida’s vibrant communities.</p>
+        <p>At Central Florida Property Services, we specialize in managing vacation rentals and properties in Orlando, Kissimmee, and Central Florida. Our dedicated team ensures your properties thrive with top-tier management, cleaning, and marketing services.</p>
+        <p>With deep roots in the Central Florida community, we’re committed to delivering stress-free solutions for property owners and exceptional experiences for guests.</p>
     </section>
 
     <!-- Services Section -->
@@ -49,7 +73,7 @@
         <div class="service-grid">
             <div class="service-item">
                 <h3>Property Management</h3>
-                <p>Comprehensive management for vacation rentals, including guest communication, bookings, and maintenance across Central Florida.</p>
+                <p>Comprehensive management for your vacation rentals, including guest support, bookings, and maintenance across Central Florida.</p>
             </div>
             <div class="service-item">
                 <h3>Full-Service Cleanings</h3>
@@ -57,7 +81,7 @@
             </div>
             <div class="service-item">
                 <h3>Marketing & Bookings</h3>
-                <p>Boost your rental income with targeted marketing on Airbnb, VRBO, and Central Florida travel platforms.</p>
+                <p>Maximize rental income with targeted marketing on Airbnb, VRBO, and Central Florida travel platforms.</p>
             </div>
         </div>
     </section>
@@ -89,6 +113,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 /* Reset default styles */
 * {
     margin: 0;
@@ -101,17 +126,17 @@ body {
     line-height: 1.6;
     color: #333;
     scroll-behavior: smooth;
+    background: #ffffff; /* Clean white background */
 }
 
 /* Header */
 header {
-    background: #1e3a8a; /* Clean, modern blue */
+    background: #1a2b4d; /* Navy blue */
     color: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -126,6 +151,7 @@ nav {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
+    color: #d4a017; /* Gold */
 }
 
 .logo-img {
@@ -136,25 +162,65 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f97316; /* Modern orange accent */
+    color: #d4a017; /* Gold on hover */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #1a2b4d; /* Navy blue */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #2d4373; /* Lighter navy */
+    color: #d4a017;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1200x600/?orlando') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1200x600/?kissimmee') no-repeat center/cover;
     color: white;
     text-align: center;
-    padding: 140px 20px;
+    padding: 120px 20px;
 }
 
 .hero-content {
@@ -163,19 +229,20 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 300;
     margin-bottom: 2rem;
 }
 
 .cta-button {
-    background: #f97316;
-    color: white;
+    background: #d4a017; /* Gold */
+    color: #1a2b4d; /* Navy text */
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -184,7 +251,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background: #ea580c;
+    background: #b38712; /* Darker gold */
 }
 
 /* About Section */
@@ -197,13 +264,15 @@ nav ul li a:hover {
 }
 
 .about h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a2b4d;
     margin-bottom: 1.5rem;
-    color: #1e3a8a;
 }
 
 .about p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 300;
     max-width: 800px;
     margin: 0 auto 1rem;
 }
@@ -217,9 +286,10 @@ nav ul li a:hover {
 }
 
 .services h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a2b4d;
     margin-bottom: 2rem;
-    color: #1e3a8a;
 }
 
 .service-grid {
@@ -241,14 +311,15 @@ nav ul li a:hover {
 }
 
 .service-item h3 {
-    font-shape: square;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a2b4d;
     margin-bottom: 1rem;
-    color: #1e3a8a;
 }
 
 .service-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 /* Contact Section */
@@ -259,9 +330,10 @@ nav ul li a:hover {
 }
 
 .contact h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a2b4d;
     margin-bottom: 2rem;
-    color: #1e3a8a;
 }
 
 #contact-form {
@@ -278,62 +350,64 @@ nav ul li a:hover {
     padding: 12px;
     border: 1px solid #d1d5db;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: white;
 }
 
 #contact-form select {
     appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"><path d="M0 0l6 6 6-6H0z"/></svg>') no-repeat right 10px center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"><path fill="#1a2b4d" d="M0 0l6 6 6-6H0z"/></svg>') no-repeat right 10px center;
     background-size: 12px;
 }
 
 #contact-form textarea {
-    height: 160px;
+    height: 150px;
 }
 
 #contact-form button {
-    background: #1e3a8a;
-    color: white;
+    background: #d4a017;
+    color: #1a2b4d;
     padding: 12px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 #contact-form button:hover {
-    background: #1e3a8a;
+    background: #b38712;
 }
 
 #form-message {
     margin-top: 1.5rem;
     color: #15803d;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* Footer */
 footer {
-    background: #1e3a8a;
+    background: #1a2b4d;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 20px;
 }
 
 footer p {
-    margin: 8px 0;
     font-size: 0.9rem;
+    font-weight: 300;
+    margin: 5px 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     nav ul {
@@ -341,10 +415,17 @@ footer p {
         gap: 15px;
     }
 
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #2d4373;
+    }
+
     .service-item {
         padding: 20px;
     }
 }
+
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
